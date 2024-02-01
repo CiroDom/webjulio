@@ -1,0 +1,26 @@
+#div-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.title-prod{
+    color: lightskyblue;
+    font-family: Inter;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.price {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
