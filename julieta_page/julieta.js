@@ -1,35 +1,71 @@
 function setObj(obj) {
-    let divParent = document.getElementById("div-parent");
 
-    let divChild = document.createElement("div");
+  //VALUES
 
-    let img = document.createElement("img");
-    img.src = obj["thumbnailUrl"];
-    divChild.appendChild(img);
+  const prodName = obj["title"]
 
-    let h1 = document.createElement("h1");
-    h1.textContent = obj["title"];
-    h1.classList.add("title-prod");
-    divChild.appendChild(h1);
+  const priceValue = obj["id"];
 
-    let h2 = document.createElement("h2");
-    h2.textContent = obj["id"];
-    h2.classList.add("price");
-    divChild.appendChild(h2);
+  const realPrice = "R$ " + priceValue;
+  
+  const oldPriceValue = priceValue * 2;
+  const oldPrice = "R$ " + oldPriceValue;
 
-    let tagA = document.createElement("a");
-    tagA.href = obj["url"];
-    tagA.target = "_blank";
-    let bttn = document.createElement("button");
-    bttn.classList.add("button");
-    bttn.textContent = "ir pra outra aba"
-    tagA.appendChild(bttn);
-    divChild.appendChild(tagA);
+  const prodImg = obj["thumbnailUrl"]
 
-    let hr = document.createElement("hr");
-    divChild.appendChild(hr);
+  //DIVS CREATION AND GETTING
 
-    divParent.appendChild(divChild);
+  let divList = document.getElementById("div-list");
+  let divItem = document.createElement("div");
+  let divInfos = document.createElement("div");
+  let divPrice = document.createElement("div");
+  let divHoriz = document.createElement("div");
+
+  //ELEMENTS CREATION
+
+  let img = document.createElement("img");
+  let nameTitel = document.createElement("h1");
+  let realPriceTitel = document.createElement("h2");
+  let oldPriceTitel = document.createElement("h3");
+  let tagA = document.createElement("a");
+  let bttn = document.createElement("button");
+  let fiftyOff = document.createElement("p");
+
+  //SETTING
+
+  img.src = prodImg;
+  nameTitel.textContent = prodName;
+  oldPriceTitel.textContent = oldPrice;
+  realPriceTitel.textContent = realPrice;
+  fiftyOff.textContent = "50% OFF";
+
+  nameTitel.classList.add("title-prod");
+  oldPriceTitel.classList.add("old-price");
+  realPriceTitel.classList.add("real-price");
+  fiftyOff.classList.add("fifty-off");
+
+  divList.classList.add("div-list");
+  divItem.classList.add("div-item");
+  divInfos.classList.add("div-infos");
+  divPrice.classList.add("div-price");
+  divHoriz.classList.add("div-horiz");
+
+  //SETTING UP
+
+  divHoriz.appendChild(realPriceTitel);
+  divHoriz.appendChild(fiftyOff);
+
+  divPrice.appendChild(oldPriceTitel);
+  divPrice.appendChild(divHoriz);
+
+  divInfos.appendChild(nameTitel);
+  divInfos.appendChild(divPrice);
+  divInfos.appendChild(tagA);
+
+  divItem.appendChild(img);
+  divItem.appendChild(divInfos);
+
+  divList.appendChild(divItem);
 }
 
 async function fetchData() {

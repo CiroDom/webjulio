@@ -1,7 +1,31 @@
-#div-parent {
+.div-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+}
+
+.div-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.div-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.div-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-horiz {
+    display: flex;
+    justify-content: left;
+    align-items: left;
 }
 
 .title-prod{
@@ -11,10 +35,33 @@
     font-size: 20px;
 }
 
-.price {
-    color: black;
-    font-size: 25px;
-    font-weight: 500;
+.real-price {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 36px;
+    margin: 0%;
+}
+
+.old-price {
+    color: rgba(0, 0, 0, 0.55);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: line-through;
+    margin: 0%;
+}
+
+.fifty-off {
+    color: rgb(0, 166, 80);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
+    margin: 0%;
+    margin-left: 0.5rem;
 }
 
 .button {
