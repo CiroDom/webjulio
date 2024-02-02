@@ -1,19 +1,22 @@
 .div-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 2rem;
 }
 
 .div-item {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
 }
 
 .div-infos {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .div-price {
@@ -33,6 +36,7 @@
     font-family: Inter;
     font-weight: 200;
     font-size: 20px;
+    margin: 0;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;

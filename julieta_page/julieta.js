@@ -2,6 +2,8 @@ function setObj(obj) {
 
   //VALUES
 
+  const prodImg = obj["thumbnailUrl"]
+
   const prodName = obj["title"]
 
   const priceValue = obj["id"];
@@ -11,7 +13,8 @@ function setObj(obj) {
   const oldPriceValue = priceValue * 2;
   const oldPrice = "R$ " + oldPriceValue;
 
-  const prodImg = obj["thumbnailUrl"]
+  const buttonMsg = "buy that!";
+  const prodUrl = obj["url"];
 
   //DIVS CREATION AND GETTING
 
@@ -28,7 +31,7 @@ function setObj(obj) {
   let realPriceTitel = document.createElement("h2");
   let oldPriceTitel = document.createElement("h3");
   let tagA = document.createElement("a");
-  let bttn = document.createElement("button");
+  let button = document.createElement("button");
   let fiftyOff = document.createElement("p");
 
   //SETTING
@@ -38,17 +41,23 @@ function setObj(obj) {
   oldPriceTitel.textContent = oldPrice;
   realPriceTitel.textContent = realPrice;
   fiftyOff.textContent = "50% OFF";
+  tagA.href = prodUrl;
+  tagA.target = "_blank";
+  button.textContent = buttonMsg;
 
   nameTitel.classList.add("title-prod");
   oldPriceTitel.classList.add("old-price");
   realPriceTitel.classList.add("real-price");
   fiftyOff.classList.add("fifty-off");
+  button.classList.add("button");
 
   divList.classList.add("div-list");
   divItem.classList.add("div-item");
   divInfos.classList.add("div-infos");
   divPrice.classList.add("div-price");
   divHoriz.classList.add("div-horiz");
+
+  tagA.appendChild(button)
 
   //SETTING UP
 
