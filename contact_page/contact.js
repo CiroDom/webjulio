@@ -1,23 +1,21 @@
-let name , subject , msg;
+const inputButton = document.getElementById("inputButton");
+let name , subject , message;
 
 name = document.getElementById('name').value;
 subject = document.getElementById('subject').value;
-msg = document.getElementById('message').value;
+message = document.getElementById('message').value;
 
-async function fetchData() {
-  try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/photos');
-
-    if (!response.ok) {
-      throw new Error(`Erro de Rede: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error('Erro ao buscar os dados:', error);
-  }
+async function postMsg(name, subject, message) {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  body: JSON.stringify({
+    name: name,
+    subject: subject,
+    message: message,
+  }),
+  })
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 }
 
-fetchData();
+inputButton.addEventListener("click", postMsg(name, subject, message));

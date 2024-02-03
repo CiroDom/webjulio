@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
             rel="stylesheet">
+            <link rel="stylesheet" href="./contact_style.css">
         <title>Sua Página</title>
     </head>
 
@@ -16,17 +17,18 @@
             <div style="text-align:center">
             <h2>Contact Us</h2>
             <p>Swing by for a cup of coffee, or leave us a message:</p>
-            <div class="column">
+            <div id="div-labels">
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <input id="name" type="text" name="name" placeholder="Your name" required>
     
                     <label for="lname">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <input  id="subject" type="text" name="subject" placeholder="Subject" required>
     
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Write something.." style="height:570px" required></textarea>
-                    <input type="submit" value="Submit">
+
+                    <input id="inputButton" type="submit" value="Submit">
                 </form>
             </div>
 
