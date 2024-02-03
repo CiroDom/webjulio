@@ -17,7 +17,8 @@ async function postMsg() {
   }),
   })
   .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((json) => console.log(json))
+  .catch((error) => console.error("Error: ", error));
 }
 
 inputButton.addEventListener("click", postMsg);
