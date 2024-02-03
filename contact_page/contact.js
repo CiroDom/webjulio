@@ -1,13 +1,15 @@
-const inputButton = document.getElementById("inputButton");
-let name , subject , message;
+let inputButton = document.getElementById("inputButton");
 
-name = document.getElementById('name').value;
-subject = document.getElementById('subject').value;
-message = document.getElementById('message').value;
+async function postMsg() {
+  let name = document.getElementById('name').value;
+  let subject = document.getElementById('subject').value;
+  let message = document.getElementById('message').value;
 
-async function postMsg(name, subject, message) {
   fetch("https://jsonplaceholder.typicode.com/posts", {
   method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
   body: JSON.stringify({
     name: name,
     subject: subject,
@@ -18,4 +20,4 @@ async function postMsg(name, subject, message) {
   .then((json) => console.log(json));
 }
 
-inputButton.addEventListener("click", postMsg(name, subject, message));
+inputButton.addEventListener("click", postMsg);
