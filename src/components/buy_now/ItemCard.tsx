@@ -6,6 +6,9 @@ interface ItemProps {
 }
 
 function ItemCard(props: ItemProps) {
+    let realPrice: string = "R$ " + (props.price * 2)
+    let oldPrice: string = "R$ " + (props.price)   
+    
     return (
         <div className="div-item">
             <img src={props.thumbnailUrl}/>
@@ -17,12 +20,12 @@ function ItemCard(props: ItemProps) {
 
                 <div className="div-price">
                     <h3 className="old-price">
-                        {props.price / 2}
+                        {oldPrice}
                     </h3>
 
                     <div className="div-horiz">
                         <h2 className="real-price">
-                            {props.price}
+                            {realPrice}
                         </h2>
 
                         <p className="fifty-off">
