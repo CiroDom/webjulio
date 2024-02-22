@@ -31,7 +31,7 @@ function BuyNow() {
         <div>
             <Header content={'Itens para compra:'} />
 
-            <div id="div-list">
+            <div className="div-list">
                 {
                     itens.map(item => (
                         <ItemCard thumbnailUrl={item["thumbnailUrl"]} title={item["title"]} price={item["id"]} url={item["url"]}/>

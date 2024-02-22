@@ -31,7 +31,7 @@ function ItemCard(props: ItemProps) {
                     </div>
                 </div>
 
-                <a href={props.thumbnailUrl}>
+                <a href={props.url}>
                     <button className="button">
                         Buy Now
                     </button>

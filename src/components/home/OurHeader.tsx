@@ -22,7 +22,7 @@ const OurHeader = (props: OurHeaderProps) => {
 
                 <h3>{props.strings[3]}</h3>
 
-                <a href="./buynow_page/index.html">
+                <a href="/buynow">
                     <button className="dark-button header-button">
                         {props.strings[4]}
                     </button>
