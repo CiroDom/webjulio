@@ -15,7 +15,7 @@ const OurHeader = (props: OurHeaderProps) => {
                         {props.strings[1]}
                     </a>
 
-                    <a className="text-text-button" href="./contact_page/index.html">
+                    <a className="text-text-button" href="./contact">
                         {props.strings[2]}
                     </a>
                 </div>
