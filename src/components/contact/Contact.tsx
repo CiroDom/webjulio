@@ -1,10 +1,41 @@
 import Header from '../buy_now/Header';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 
 function Contact() {
     const [name, setName] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+
+    async function postMsg() {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/photos', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    name: name,
+                    subject: subject,
+                    message: message,
+                  }),
+            });
+        
+            if (!response.ok) {
+              throw new Error(`Erro de Rede: ${response.status}`);
+            }
+          }
+          catch (error) {
+            console.error('Erro ao buscar os dados:', error);
+          }
+    }
+
+    function handleSubmit(e: FormEvent) {
+        e.preventDefault()
+
+        console.log(name, subject, message);
+        postMsg();
+    }
 
 
     return (
@@ -12,14 +43,14 @@ function Contact() {
             <Header content={'Itens para compra:'} />
             
             <div className={'form-container'}>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Name</label>
                     <input 
                         id="name"
                         type="text"
                         name="name"
                         placeholder="Your name"
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(n) => setName(n.target.value)}
                         value={name}
                         required />
     
@@ -29,7 +60,7 @@ function Contact() {
                         type="text"
                         name="subject"
                         placeholder="Subject"
-                        onChange={(e) => setSubject(e.target.value)}
+                        onChange={(s) => setSubject(s.target.value)}
                         value={subject}
                         required />
     
@@ -39,7 +70,7 @@ function Contact() {
                         name="message"
                         placeholder="Write something.."
                         style={{height: '570px'}}
-                        onChange={(e) => setMessage(e.target.value)}
+                        onChange={(msg) => setMessage(msg.target.value)}
                         value={message}
                         required></textarea>
 

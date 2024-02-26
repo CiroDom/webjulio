@@ -6,26 +6,24 @@ import ItemCard from "./ItemCard";
 function BuyNow() {
     const [itens, setItens] = useState([]);
 
-    useEffect(() => {
-        async function fetchItens() {
-            try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/photos');
+    async function fetchItens() {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/photos');
+        
+            if (!response.ok) {
+              throw new Error(`Erro de Rede: ${response.status}`);
+            }
+        
+            const jsonData =  await response.json();
+            setItens(jsonData);
             
-                if (!response.ok) {
-                  throw new Error(`Erro de Rede: ${response.status}`);
-                }
             
-                const jsonData =  await response.json();
-                setItens(jsonData);
-                
-                
-              } catch (error) {
-                console.error('Erro ao buscar os dados:', error);
-              }
-        }
-    
-        fetchItens();
-    }, []);
+          } catch (error) {
+            console.error('Erro ao buscar os dados:', error);
+          }
+    }
+
+    useEffect(() => {fetchItens()}, []);
 
     return (
         <div>
