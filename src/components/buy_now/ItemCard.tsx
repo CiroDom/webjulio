@@ -10,10 +10,10 @@ function ItemCard(props: ItemProps) {
     let oldPrice: string = "R$ " + (props.price)   
     
     return (
-        <div className="div-item">
+        <div className="flex flex-col justify-between p-2 border border-gray-300">
             <img src={props.thumbnailUrl}/>
 
-            <div className="div-infos">
+            <div className="flex flex-col justify-between gap-6 p-2">
                 <h1 className="title-prod">
                     {props.title}
                 </h1>

@@ -1,40 +1,17 @@
+import { postMsg } from '../../requests/requests';
 import Header from '../buy_now/Header';
-import React, { useState, useEffect, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
 
 function Contact() {
     const [name, setName] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
 
-    async function postMsg() {
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/photos', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify({
-                    name: name,
-                    subject: subject,
-                    message: message,
-                  }),
-            });
-        
-            if (!response.ok) {
-              throw new Error(`Erro de Rede: ${response.status}`);
-            }
-          }
-          catch (error) {
-            console.error('Erro ao buscar os dados:', error);
-          }
-    }
-
     function handleSubmit(e: FormEvent) {
         e.preventDefault()
 
         console.log(name, subject, message);
-        postMsg();
+        postMsg(name, subject, message);
     }
 
 
