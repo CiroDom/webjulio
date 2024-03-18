@@ -1,346 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.our-card {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 170px;
-}
-
-.our-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
-.subrow-header {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.align-outr {
-  align-items: flex-end;
-}
-
-.max-width-cards {
-  max-width: 445px;
-}
-
-.max-width-mini-card {
-  max-width: 255;
-}
-
-.margin-mini-card {
-  margin-right: 30px;
-}
-
-.margin-top-price {
-  margin-top: 240px;
-}
-
-.margin-bottom-little {
-  margin-bottom: 35px;
-}
-
-.margin-bottom-big {
-  margin-bottom: 60px;
-}
-
-.margin-bottom-biggest {
-  margin-bottom: 170px;
-}
-
-.text-text-button {
-  color: var(--Colour-Main-Blue-500, #505F98);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.text-mini-card {
-  color: var(--Colour-Main-Grey-600, #5D6970);
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px; /* 150% */
-}
-
-.text-end {
-  color: var(--Colour-Main-Grey-600, #5D6970);
-  text-align: center;
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px; /* 150% */
-  max-width: 600px;
-}
-
-.text-end-price {
-  color: var(--Colour-Main-Blue-600, #37447E);
-  text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px; 
-}
-
-.text-footer {
-  color: var(--Colour-Main-Grey-400, #939EA4);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px; /* 171.429% */
-}
-
-.dark-button {
-  border-radius: 2px;
-  border: 2px solid #111b47;
-  background: var(--Colour-Main-Blue-800, #111B47);
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: #FFF;
-}
-
-.clear-button {
-  border-radius: 2px;
-  border: 2px solid var(--Colour-Main-Blue-900, #091133);
-  background-color: transparent;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: #091133;
-}
-
-.under-price-button {
-  width: 160px;
-}
-
-.header-button {
-  width: 160px;
-}
-
-.intro-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 965px;
-}
-
-.intro-div {
-  max-width: 540px;
-}
-
-.intro-button {
-  width: 160px;
-}
-
-.intro-buttons {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.text-card {
-  color: var(--Colour-Main-Blue-400, #6F7CB2);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-.padding-page {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
-.padding-top-card {
-  padding-top: 170px;
-}
-
-.text-card {
-  color: var(--Colour-Main-Blue-400, #6F7CB2);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-}
-
-.div-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.div-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 0.5rem;
-  border: 1px solid lightgray;
-}
-
-.div-infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.div-price {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.div-horiz {
-  display: flex;
-  justify-content: left;
-  align-items: left;
-}
-
-.fifty-off {
-  color: rgb(0, 166, 80);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24.3px;
-  margin: 0%;
-  margin-left: 0.5rem;
-}
-
-.button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-}
-
-.title-prod{
-  color: lightskyblue;
-  font-family: Inter;
-  font-weight: 200;
-  font-size: 20px;
-  margin: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.real-price {
-  color: rgba(0, 0, 0, 0.9);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 36px;
-  margin: 0%;
-}
-
-.old-price {
-  color: rgba(0, 0, 0, 0.55);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px;
-  text-decoration: line-through;
-  margin: 0%;
-}
-
-/* Estilo para a página de contato */
-.container {
-  max-width: 800px;
+#root {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0rem;
+  text-align: center;
 }
 
-.form-container {
-  background-color: #f2f2f2;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.form-container label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.form-container input[type="text"],
-.form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  box-sizing: border-box; /* Garante que o padding não afete a largura */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.form-container input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.card {
+  padding: 2rem;
 }
 
-.form-container input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-
-h2 {
-  color: var(--Colour-Main-Blue-900, #091133);
-  font-family: Roboto;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 48px;
-  margin-top: 0.15rem;
-  margin-bottom: 0.15rem;
-}
-
-footer {
-  background: #E7ECFF;
-}
-
-#biggest-img {
-  position: absolute;
-  z-index: -1;
-  right: 0;
+.read-the-docs {
+  color: #888;
 }

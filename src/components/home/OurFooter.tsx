@@ -1,38 +1,40 @@
 function OurFooter() {
     return (
-        <div>
-            <div className="flex-row justify-between align-center padding-page">
-                <p className="text-footer">
+        <div className="bg-bgFooter pt-16 pb-8">
+            <div className="flex items-center justify-between mb-10 px-24">
+                <p className="text-grayFooterCopy mx-2 font-roboto text-sm font-medium leading-6">
                     ©2023 Yourcompany
                 </p>
 
-                <h3>Landing</h3>
+                <h3 className="text-blueGrayDark font-roboto text-2xl font-extrabold leading-9">
+                    Landing
+                </h3>
 
                 <button className="dark-button footer-button">
                     Purchase now
                 </button>
             </div>
 
-            <div className="padding-page">
-                <hr/>
+            <div className="px-24">
+                <hr className="bg-grayFooterHr border-grayFooterHr"/>
             </div>
 
-            <div className="relative flex-row justify-between align-center padding-page">
-                <div className="relative flex-row align-center">
-                    <a className="text-footer">
+            <div className="relative flex items-center justify-between px-24">
+                <div className="relative flex items-center mt-5">
+                    <a className="text-grayFooterCopy mx-2 font-roboto text-sm font-medium leading-6">
                         Home
                     </a>
 
-                    <a className="text-footer" href="/about_page" target="_blank">
+                    <a className="text-grayFooterCopy mx-2 font-roboto text-sm font-medium leading-6" href="/about_page" target="_blank">
                         About
                     </a>
 
-                    <a className="text-footer" href="/contact_page">
+                    <a className="text-grayFooterCopy mx-2 font-roboto text-sm font-medium leading-6" href="/contact_page">
                         Contact
                     </a>
                 </div>
 
-                <div>
+                <div className="flex gap-8">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path
                             d="M9 5.5V3.5C9 2.948 9.448 2.5 10 2.5H11V0H9C7.343 0 6 1.343 6 3V5.5H4V8H6V16H9V8H11L12 5.5H9Z"

@@ -5,8 +5,8 @@ interface OurHeaderProps {
 const OurHeader = (props: OurHeaderProps) => {
     return (
         <header>
-            <div className="our-header">
-                <div className="subrow-header">
+            <div className="flex justify-between items-center px-24">
+                <div className="flex justify-center gap-4">
                     <a className="text-text-button">
                         {props.strings[0]}
                     </a>
@@ -20,10 +20,12 @@ const OurHeader = (props: OurHeaderProps) => {
                     </a>
                 </div>
 
-                <h3>{props.strings[3]}</h3>
+                <h3 className="text-blueGrayDark font-roboto text-2xl font-extrabold leading-9">
+                    {props.strings[3]}
+                </h3>
 
                 <a href="/buynow">
-                    <button className="dark-button header-button">
+                    <button className="dark-button w-40">
                         {props.strings[4]}
                     </button>
                 </a>

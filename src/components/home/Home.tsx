@@ -47,7 +47,7 @@ function Home() {
         <div>
             <OurHeader strings={headerStrings} />
 
-            <main className='padding-page'>
+            <main>
                 <section>
                     <OurIntro />
                 </section>
