@@ -5,7 +5,7 @@ interface OurHeaderProps {
 const OurHeader = (props: OurHeaderProps) => {
     return (
         <header>
-            <div className="flex justify-between items-center px-24">
+            <div className="flex justify-between items-center px-24 py-3">
                 <div className="flex justify-center gap-4">
                     <a className="text-text-button">
                         {props.strings[0]}
